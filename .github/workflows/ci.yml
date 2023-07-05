@@ -15,7 +15,7 @@ on:
         
 
     steps:
-    - name: "Init repository"
+    - name: Init repository
       uses: actions/checkout@v3
 
     - name: Setup PHP
@@ -27,7 +27,7 @@ on:
       - name: Install Composer Dependencies
         run: composer install
 
-      - name: "Audit dependancies"
+      - name: Audit dependancies
         run: composer audit
 
       - name: Execute phpstan
